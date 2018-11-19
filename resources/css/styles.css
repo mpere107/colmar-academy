@@ -520,13 +520,25 @@ p.primary-words {
   display: flex;
 }
 
-.footer-right h5:last-child {
-  padding-left: 0.5rem;
+.footer-right .terms-link {
+  padding-right: 0.5rem;
+}
+
+.footer-right .privacy-link {
+  margin-right: 1rem;
 }
 
 .footer-right a {
   text-decoration: none;
   color: black;
+}
+
+.fa-facebook {
+  margin-right: 0.3rem;
+}
+
+.fa-linkedin {
+  margin-right: 0.3rem;
 }
 
 @media only screen and (max-width: 480px) {

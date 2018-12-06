@@ -10,12 +10,32 @@
     <link rel="stylesheet" href="resources/css/all.css">
     <link rel="icon" href="resources/images/favicon-logo.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script>
+      function dropFunction() {
+        document.getElementById("detailDropdown").classList.toggle("show");
+    }
+      function dropFunction2() {
+        document.getElementById("detailDropdown2").classList.toggle("show");
+    }
+      function dropFunction3() {
+        document.getElementById("detailDropdown3").classList.toggle("show");
+    }
+      function dropFunction4() {
+        document.getElementById("detailDropdown4").classList.toggle("show");
+    }
+      function dropFunction5() {
+        document.getElementById("detailDropdown5").classList.toggle("show");
+    }
+      function dropFunction6() {
+        document.getElementById("detailDropdown6").classList.toggle("show");
+      }
+    </script>
   </head>
 
 
   <body>
     <!--Header-->
-    <div class="header-nav">
+    <header>
       <div class="logo">
         <a href="#"><img src="resources/images/ic-logo.svg" alt="Colmar Academy logo"></a>
         <h1>Colmar<span id="skinny-text">Academy</span></h1>
@@ -34,7 +54,7 @@
           <li class="person"><a href="#"><img src="resources/images/ic-login.svg"></a></li>
         </ul>
       </nav>
-    </div>
+    </header>
     <!--Banner-->
     <div class="banner-message">
       <div class="banner-content">
@@ -96,7 +116,7 @@
           <img src="resources/images/course-software.jpg" alt="Computer on a desk">
           <div class="course-details">
             <h3>Software Engineering</h3>
-            <p>Courses</p>
+            <p>Courses:</p>
             <p>Web Development, Mobile Development, iOT, APIs</p>
           </div>
         </div>
@@ -104,7 +124,7 @@
           <img src="resources/images/course-computer-art.jpg" alt="First-person view of holding a smartphone">
           <div class="course-details">
             <h3>Computer Art</h3>
-            <p>Courses</p>
+            <p>Courses:</p>
             <p>Image &amp; Design, Web Design, Motion Graphics &amp; Visual Effects, Computer Animation</p>
           </div>
         </div>
@@ -112,7 +132,7 @@
           <img src="resources/images/course-design.jpg" alt="Collegiate using a vintage camera">
           <div class="course-details">
             <h3>Design</h3>
-            <p>Courses</p>
+            <p>Courses:</p>
             <p>User Experience Design, User Research, Visual Design</p>
           </div>
         </div>
@@ -122,7 +142,7 @@
           <img src="resources/images/course-data.jpg" alt="A laptop screen showing computer data">
           <div class="course-details">
             <h3>Data</h3>
-            <p>Courses</p>
+            <p>Courses:</p>
             <p>Data Science, Big Data, SQL, Data Visualization</p>
           </div>
         </div>
@@ -130,7 +150,7 @@
           <img src="resources/images/course-business.jpg" alt="Chess pieces on a chess board">
           <div class="course-details">
             <h3>Business</h3>
-            <p>Courses</p>
+            <p>Courses:</p>
             <p>Production Development, Business Development, Startup</p>
           </div>
         </div>
@@ -138,19 +158,72 @@
           <img src="resources/images/course-marketing.jpg" alt="An individual operating a smartwatch">
           <div class="course-details">
             <h3>Marketing</h3>
-            <p>Courses</p>
+            <p>Courses:</p>
             <p>Analytics, Content Marketing, Mobile Marketing</p>
           </div>
         </div>
       </div>
-      <div class="course-list-mobile" role="presentation">
+      <!--<div class="course-list-mobile" role="presentation">
         <h3><a href="#">Software Engineering</a></h3>
         <h3><a href="#">Computer Art</a></h3>
         <h3><a href="#">Design</a></h3>
         <h3><a href="#">Data</a></h3>
-        <h3><a href="#">Data</a></h3>
         <h3><a href="#">Business</a></h3>
         <h3><a href="#">Marketing</a></h3>
+      </div>-->
+      <div class="course-list-mobile">
+        <div class="dropdown">
+          <button onclick="dropFunction()" class="dropbutton">Software Engineering</button>
+          <div id="detailDropdown" class="dropdown-look">
+            <p>Web Development</p>
+            <p>Mobile Development</p>
+            <p>iOT</p>
+            <p>APIs</p>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button onclick="dropFunction2()" class="dropbutton">Computer Art</button>
+          <div id="detailDropdown2" class="dropdown-look">
+            <p>Image &amp; Design</p>
+            <p>Web Design</p>
+            <p>Motion Graphics &amp; Visual Effects</p>
+            <p>Computer Animation</p>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button onclick="dropFunction3()" class="dropbutton">Design</button>
+          <div id="detailDropdown3" class="dropdown-look">
+            <p>User Experience Design</p>
+            <p>User Research</p>
+            <p>Visual Design</p>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button onclick="dropFunction4()" class="dropbutton">Data</button>
+          <div id="detailDropdown4" class="dropdown-look">
+            <p>Data Science</p>
+            <p>Big Data</p>
+            <p>SQL</p>
+            <p>Data Visualization</p>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button onclick="dropFunction5()" class="dropbutton">Business</button>
+          <div id="detailDropdown5" class="dropdown-look">
+            <p>Production Development</p>
+            <p>Business Development</p>
+            <p>Startup</p>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button onclick="dropFunction6()" class="dropbutton">Marketing</button>
+          <div id="detailDropdown6" class="dropdown-look">
+            <p>Analytics</p>
+            <p>Content Marketing</p>
+            <p>Startup</p>
+            <p>Mobile Marketing</p>
+          </div>
+        </div>
       </div>
     </div>
     <!--Main Content #3-->
@@ -171,15 +244,17 @@
           <div class="main-layout fisma">
             <img src="resources/images/thesis-fisma.jpg" alt="ideas written on paper">
             <div class="layout-info">
-              <h3><a href="#">Fisma: Design and Prototype</a></h3>
+              <h3>Fisma: Design and Prototype</h3>
               <p>Designer showcase of new prototype product</p>
+              <a class="read-more" href="#">Read More</a>
             </div>
           </div>
           <div class="main-layout new-york">
             <img src="resources/images/thesis-now-and-then.jpg" alt="a scene of downtown New York">
             <div class="layout-info">
-              <h3><a href="#">Now and Then</a></h3>
+              <h3>Now and Then</h3>
               <p>Research study about New York</p>
+              <a class="read-more" href="#">Read More</a>
             </div>
           </div>
         </div>
@@ -192,7 +267,7 @@
       </div>
     </div>
     <!--Footer-->
-    <div class="footer">
+    <footer>
       <h5>Copyright 2016 Colmar Academy. All rights reserved.</h5>
       <div class="footer-right">
         <h5 class="terms-link"><a href="#">Terms</a></h5>
@@ -201,7 +276,7 @@
         <a href="#"><i class="fab fa-linkedin"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
       </div>
-    </div>
+    </footer>
     <!--End-->
   </body>
 
@@ -216,4 +291,5 @@
 5. I felt more confident than any other project when using Flex-Box. I used 'display: flex;' in the appropriate divs to arrange elements, and it's been (mostly) successful.
 6. I figured out how to center the icons on the nav by considering note #1's behavior and doing trial-and-error on flex boxes.
 7. I recommend to not use this nav as a guide for future sites, since it's the implementation of Flex Blox made it wonky.
+8. Sometimes not adding the CSS line "property: initial" value helps with getting the result you want. I was trying to get a link to go from black to its original blue/purple initial state but inserting the code "color: initial" wasn't working for some reason. Once I deleted it, I got the blue/purple original links again.
  -->
